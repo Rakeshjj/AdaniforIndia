@@ -1,7 +1,7 @@
 /* General styles */
 .home-case {
     padding-top: 100px;
-    padding-bottom: 70px;
+    padding-bottom: 5px;
 }
 
 .section-title {
@@ -27,7 +27,7 @@
 /* Tab Navigation */
 .nav-tabset {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     margin-bottom: 30px;
     list-style: none;
 }
@@ -93,9 +93,9 @@
 }
 
 
-#pagination{
-    margin-top: 20px;
-    margin-left: 33rem;
+.pagination{
+    margin-top: -5px;
+    margin-left: 1rem;
 }
 
 #single-blog{
@@ -304,9 +304,312 @@
 
 #carousel-image{
     height: 500px;
-    width: 530px;
+    width: 320px;
     margin-top: 30px;
+    margin-left: -5px;
 }
 #carousel-arrow{
-    /* margin-left: -5rem; */
+    margin-top: -7rem;
 }
+
+/* #video{
+    margin-left: 2rem;
+} */
+
+@media (max-width:768px)  {
+    #carousel-image {
+        height: 500px;
+        width: 350px !important;
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+    #conatent{
+        margin-top: -105px !important;
+    }
+    #adaniannual{
+        width: 100%;
+        height: 20rem !important;
+    }
+    #adaniannual1{
+        width: 100%;
+        height: 20rem !important;
+        margin-top: 2rem !important;
+    }
+    #reports1{
+        text-align: center !important;
+        font-family: "roboto-bold";
+        font-weight: 600 !important;
+        
+    }
+}
+#reports1{
+    font-family: sans-serif;
+    font-weight: 600;
+    
+}
+
+.card {
+    position: relative;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+}
+
+.card {
+    background: #fff;
+    overflow: hidden;
+}
+
+#cardimage{
+    height: 13rem;
+}
+
+
+.video-card {
+    text-align: center;
+}
+
+.video-frame {
+    width: 100%;
+    height: auto;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .video-frame {
+        width: 100%;
+        height: auto;
+    }
+    #videos{
+        margin-top: -5rem;
+    }
+    #reportheading{
+        text-align: center;
+    }
+    #reportconatiner{
+        margin-top: -2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .video-frame {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#leftarrow{
+    margin-top: -7rem;
+}
+
+/* General styles for tabs */
+.nav-tabset {
+    display: flex;
+    overflow-x: auto;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    white-space: nowrap; /* Prevents line breaks in tab names */
+}
+
+.nav-tab {
+    padding: 10px 15px;
+    margin: 0;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    flex: 0 0 auto; /* Prevents shrinking and ensures horizontal scrolling */
+}
+
+.nav-tab.active {
+    border-bottom: 2px solid #007bff; /* Active tab indicator */
+}
+
+/* Tab content styles */
+.tabs-container {
+    padding: 20px;
+}
+
+.pane {
+    display: none;
+}
+
+.pane.active {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-tabset {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .nav-tab {
+        flex: 0 0 auto;
+        white-space: nowrap; /* Ensures text doesn't wrap */
+    }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 576px) {
+    .nav-tab {
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust font size for better fit */
+    }
+
+    .tabs-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* General styles for tabs */
+.nav-tabset {
+    display: flex;
+    overflow-x: auto;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap; /* Prevents line breaks in tab names */
+    border-bottom: 1px solid #ddd; /* Optional: adds a border for visual separation */
+}
+
+.nav-tab {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    flex: 0 0 auto; /* Prevents shrinking and ensures horizontal scrolling */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    text-align: center; /* Centers text within the tab */
+}
+
+.nav-tab.active {
+    border-bottom: 2px solid #007bff; /* Active tab indicator */
+}
+
+/* Tab content styles */
+.tabs-container {
+    padding: 20px;
+}
+
+.pane {
+    display: none;
+}
+
+.pane.active {
+    display: block;
+}
+
+/* General container styling */
+.container {
+    padding: 15px;
+}
+
+/* Carousel styles */
+.carousel-inner img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Adjust carousel controls */
+.carousel-control-prev, .carousel-control-next {
+    width: 5%; /* Adjust as needed */
+}
+
+/* General styling for video cards */
+.video-card {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-card iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .col-lg-7, .col-lg-5, .col-lg-4 {
+        /* Stack columns vertically on tablets and smaller screens */
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .col-lg-5 {
+        margin-top: 1rem; /* Add margin to separate from other content */
+    }
+}
+
+@media (max-width: 576px) {
+    .video-card {
+        padding-bottom: 75%; /* Adjust aspect ratio for smaller screens if needed */
+    }
+
+    .video-card iframe {
+        height: 15rem;
+    }
+}
+
+#reports{
+    height: 22rem;
+    position: relative;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .col-3, .col-9 {
+        /* Stack columns vertically on smaller screens */
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 15px; /* Add spacing between stacked elements */
+    }
+    
+    .carousel-control-prev, .carousel-control-next {
+        width: 8%; /* Make controls larger for easier use */
+    }
+    
+    .carousel-inner img {
+        height: auto; /* Ensure images fit properly */
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-control-prev, .carousel-control-next {
+        width: 10%; /* Adjust control size for very small screens */
+    }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-tabset {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-tab {
+        flex: 0 0 auto;
+        white-space: nowrap; /* Ensures text doesn't wrap */
+    }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 576px) {
+    .nav-tab {
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust font size for better fit */
+    }
+
+    .tabs-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
