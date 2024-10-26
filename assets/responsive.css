@@ -1,0 +1,70 @@
+@media (min-width:320px) and (max-width:576px) {
+
+    .banner-image img {
+        width: 100%;
+        height: 18rem !important;
+        border-radius: 0px;
+        transition: transform 0.3s ease;
+    }
+    .big-img {
+        height: 220px !important;
+    }
+    .overlay {
+        padding: 8px;
+    }
+
+    .overlay h5 {
+        font-size: 14px;
+    }
+
+    .overlay p {
+        font-size: 11px;
+    }
+    .right-options{
+        margin-top: 0.5rem;
+    }
+
+    /* foundation section */
+    #infographicImage {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width:577px) and (max-width:768px){
+
+
+    .foundation-details-box {
+        background-color: #ffffff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 100% !important;
+        margin-top: 0.8rem;
+    }
+
+    .details-box {
+        display: block !important;
+        align-items: flex-start;
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width:769px) and (max-width:992px){
+    .foundation-details-box {
+        background-color: #ffffff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 100% !important;
+        margin-top: 0.8rem;
+    }
+
+    .details-box {
+        display: block !important;
+        align-items: flex-start;
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width:993px) and (max-width:1200px){
+
+}

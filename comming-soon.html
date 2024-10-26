@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Coming Soon</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="header">
+    <nav class="navbar navbar-expand-lg header-nav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <!-- <img src="assets/image/adanilogo.jpeg" alt="Logo" style="width: 120px;"> -->
+          Adani For India
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="comming-soon.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="comming-soon.html">Philanthropy </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="comming-soon.html">Blogs & Opinions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="comming-soon.html">Videos</a>
+            </li>
+            <li class="nav-item"></li>
+            <a class="nav-link" href="comming-soon.html">Reports</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center right-options">
+            <!-- <a href="#" class="nav-link"><i class="bi bi-bell icon"></i></a>
+                    <a href="#" class="nav-link"><i class="bi bi-person icon"></i></a> -->
+
+            <!-- Search Bar -->
+            <form class="d-flex">
+              <!-- <input class="form-control search" type="search" placeholder="Search" aria-label="Search"> -->
+              <button class="btn" type="submit"><i class="bi bi-search icon"></i></button>
+            </form>
+            <a href=""><i class="bi bi-whatsapp icon what-icon"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- Coming Soon Section -->
+  <div class="container-fluid">
+    <div class="row comming-soon-section">
+      <!-- Left Column: Coming Soon content -->
+      <div class="col-lg-12 col-md-12 d-flex align-items-center justify-content-center content-overlay">
+        <div class="comming-soon-item text-center">
+          <div class="logo">
+            <!-- <img src="assets/img/logo.png" alt="Logo"> -->
+          </div>
+          <h2 class="title">Coming Soon</h2>
+          <p>Our website is under construction. We’ll be here soon with our new awesome website. Get the best experience
+            with this one.</p>
+          <div class="counter-single-item">
+            <ul>
+              <li class="counter-item">
+                <span id="days">50</span>
+                <h6>Days</h6>
+              </li>
+              <li class="counter-item">
+                <span id="hours">00</span>
+                <h6>Hours</h6>
+              </li>
+              <li class="counter-item">
+                <span id="minutes">00</span>
+                <h6>Minutes</h6>
+              </li>
+              <li class="counter-item">
+                <span id="seconds">00</span>
+                <h6>Seconds</h6>
+              </li>
+            </ul>
+          </div>
+          <ul class="social-area">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+    // Set the target date to 50 days from now (including current time)
+    let countdownDate = new Date();
+    countdownDate.setDate(countdownDate.getDate() + 50);
+
+    // Update the countdown every 1 second
+    let countdownInterval = setInterval(function () {
+      let now = new Date().getTime();
+      let timeDifference = countdownDate - now;
+
+      // Time calculations for days, hours, minutes, and seconds
+      let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+      // Display the result in the corresponding HTML elements
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+      document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+      document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+
+      // If the countdown is over, display a message
+      if (timeDifference < 0) {
+        clearInterval(countdownInterval);
+        document.querySelector(".comming-soon-item").innerHTML = "<h2 class='title'>We're Here!</h2>";
+      }
+    }, 1000);
+
+  </script>
+</body>
+
+</html>
